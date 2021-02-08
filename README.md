@@ -17,3 +17,10 @@ Example Code:
 | Pacman(?) Clone using VGA Buf  | https://github.com/gjf2a/ghost_hunter // https://github.com/gjf2a/ghost_hunter_core // Doc: https://hendrix-cs.github.io/csci320/projects/baremetalgame  |
 |Writing an OS in Rust (mentioned by CSCI 320)|https://github.com/phil-opp/blog_os|
 |Another OS for RPI in Rust tutorial/repo|https://github.com/rust-embedded/rust-raspberrypi-OS-tutorials|
+
+
+Useful Tools:
+
+| Ressource  | URL  |
+| ------------ | ------------ |
+| RasPi Emulator  | https://github.com/jhhoward/Faux86  |
