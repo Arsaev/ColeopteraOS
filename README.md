@@ -1,5 +1,16 @@
 # ColeopteraOS
-OS for RaspberryPi based on Rust using CSCI 320 course 
+##OS for RaspberryPi based on Rust using CSCI 320 course
+
+##Already available:
+
+- Freestanding Rust binary code
+  How to compile for ARM embedded system
+    1. Add target
+       `rustup target add thumbv7em-none-eabihf`
+    2. Build for target
+       `cargo build --target thumbv7em-none-eabihf`
+
+
 
 Learning/Overview:
 
