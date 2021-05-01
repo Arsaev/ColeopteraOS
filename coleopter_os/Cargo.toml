@@ -1,14 +1,10 @@
 [package]
 name = "coleopter_os"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Magomed Arsaev <arsaev.m@gmail.com>"]
 edition = "2018"
 
-[profile.dev]
-panic = "abort"
-
 [profile.release]
-panic = "abort"
 lto = true
 
 [features]
@@ -20,4 +16,12 @@ bsp_rpi4 = []
 name = "kernel"
 path = "src/main.rs"
 
+##--------------------------------------------------------------------------------------------------
+## Dependencies
+##--------------------------------------------------------------------------------------------------
+
 [dependencies]
+
+# Platform specific dependencies
+[target.'cfg(target_arch = "aarch64")'.dependencies]
+cortex-a = { version = "5.x.x" }

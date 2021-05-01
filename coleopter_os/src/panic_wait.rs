@@ -1,7 +1,13 @@
+// SPDX-License-Identifier: MIT OR Apache-2.0
+//
+// Copyright (c) 2018-2021 Andre Richter <andre.o.richter@gmail.com>
+
+//! A panic handler that infinitely waits.
+
+use crate::cpu;
 use core::panic::PanicInfo;
 
-/// This function is called on panic.
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
-    loop {}
+    cpu::wait_forever()
 }
