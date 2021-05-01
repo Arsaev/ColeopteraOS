@@ -34,4 +34,6 @@ pub unsafe fn runtime_init() -> ! {
     zero_bss();
 
     crate::kernel_init()
+
+
 }

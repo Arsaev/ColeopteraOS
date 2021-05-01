@@ -106,14 +106,18 @@
 //!
 //! [`runtime_init::runtime_init()`]: runtime_init/fn.runtime_init.html
 
+#![feature(format_args_nl)]
 #![feature(global_asm)]
+#![feature(panic_info_message)]
 #![no_main]
 #![no_std]
 
 mod bsp;
+mod console;
 mod cpu;
 mod memory;
 mod panic_wait;
+mod print;
 mod runtime_init;
 
 /// Early init code.
@@ -122,5 +126,7 @@ mod runtime_init;
 ///
 /// - Only a single core must be active and running this function.
 unsafe fn kernel_init() -> ! {
-    panic!()
+    println!("Hello World from OS on Rust");
+
+    panic!("The End.")
 }
