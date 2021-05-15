@@ -111,6 +111,7 @@
 #![feature(panic_info_message)]
 #![no_main]
 #![no_std]
+#![feature(trait_alias)]
 
 mod bsp;
 mod console;
@@ -119,14 +120,19 @@ mod memory;
 mod panic_wait;
 mod print;
 mod runtime_init;
-
+mod synchronization;
 /// Early init code.
 ///
 /// # Safety
 ///
 /// - Only a single core must be active and running this function.
 unsafe fn kernel_init() -> ! {
+    use console::interface::Statistics;
     println!("Hello World from OS on Rust");
-
-    panic!("The End.")
+    println!(
+        "[1] Chars written: {}",
+        bsp::console::console().chars_written()
+    );
+    println!("The End.");
+    cpu::wait_forever()
 }
