@@ -1,0 +1,2 @@
+cargo:rerun-if-changed=src/bsp/raspberrypi/link.ld
+cargo:rerun-if-changed=build.rs
